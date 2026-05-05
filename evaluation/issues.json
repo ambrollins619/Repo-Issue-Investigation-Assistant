@@ -1,0 +1,8 @@
+[
+  {"id": "pagination", "issue": "GET /products?page=1&size=2 skips Notebook and Pencil. Page 1 should include IDs 1 and 2.", "expected_path": "catalog.py", "expected_terms": ["page", "size"], "partial": false},
+  {"id": "null", "issue": "GET /products/999 returns a server error instead of 404 when the product does not exist.", "expected_path": "main.py", "expected_terms": ["none", "item"], "partial": false},
+  {"id": "filter", "issue": "GET /products/search?category=stationery includes inactive Pencil and active home products. Only active stationery should be returned.", "expected_path": "catalog.py", "expected_terms": ["or", "and"], "partial": false},
+  {"id": "vague", "issue": "The catalog sometimes looks wrong. Can you investigate?", "expected_path": null, "expected_terms": [], "partial": true},
+  {"id": "unavailable", "issue": "Our payment provider charges customers twice after checkout. Find the cause of the duplicate charge.", "expected_path": null, "expected_terms": [], "partial": true}
+]
+
